@@ -1,0 +1,580 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+}
+
+/*───────────────────────*
+       Top Bar  
+ *───────────────────────*/
+.top-bar {
+  width: 1440px;
+  height: 57px;
+  background-color: #e5e5e5;
+  margin: 0 auto;
+}
+
+/*───────────────────────*
+    Planner Head SVG    
+ *───────────────────────*/
+.planner-head-wrapper {
+  position: absolute;
+  top: -10px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1173px;
+  height: 150px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.planner-head {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1173px;
+  height: auto;
+  z-index: 1;
+}
+
+/*───────────────────────*
+         Hero text    
+ *───────────────────────*/
+.hero-text-block {
+  position: absolute;
+  top: 300px;   
+  left: 43%;
+  transform: translateX(-50%);
+  width: 896px;
+  height: auto;
+  z-index: 10;
+
+  font-family: 'Sail', system-ui, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px; 
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero-text-block p {
+  margin: 0;
+}
+
+.sail-regular {
+  font-family: 'Sail', system-ui, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero-life {
+  position: absolute;
+  top: 470px;
+  left: 49%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 240px;
+  line-height: 1;
+  color: #000; 
+  z-index: 10;
+}
+
+.planner-mood {
+  position: absolute;
+  top: 10px;
+  left: 22%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  color: #000000;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.planner-month {
+  position: absolute;
+  top: 10px;
+  left: 59.5%;
+  transform: translateX(-50%);
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 35px;
+  color: #000000;
+  pointer-events: none;
+  z-index: 10; 
+}
+
+.planner-months {
+  position: absolute;
+  top: 22px;
+  left: 78.3%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 40px;
+  row-gap: 8px; 
+  z-index: 6; 
+}
+
+.planner-month-item {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.planner-month-item.clicked {
+  color: forestgreen;
+}
+
+.mood-options {
+  position: absolute;
+  top: 65px;
+  left: 23.5%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px; 
+  z-index: 6;
+}
+
+.mood-icon {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.mood-icon:hover,
+.mood-icon.selected {
+  opacity: 1;
+}
+
+.date-wrapper {
+  position: absolute;
+  top: 180px; 
+  left: 54%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.date-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  color: #333;
+  user-select: none;
+}
+
+.date-days {
+  display: flex;
+  gap: 16px; 
+}
+
+.day-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px; 
+  color: #333;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.day-item.clicked {
+  color: forestgreen;
+}
+/*----------------------------- swan bear boy --------------------------*/
+.container {
+  position: relative;
+}
+
+.who-made-1 {
+  position: absolute;
+  top: 1000px;
+  left: 18%;
+  transform: translateX(-50%);
+  width: 600px; 
+  height: auto;
+  z-index: 0;
+}
+
+.scene-img {
+  position: absolute;
+  height: auto;
+}
+
+.bear-bg {
+  top: 1170px; 
+  left: 10%; 
+  width: 27%;
+}
+
+.field-bg {
+  top: 1100px; 
+  left: 52%;
+  transform: translateX(-50%);
+  width: 40%;
+}
+
+.lake {
+  top: 1050px; 
+  left: 91%;
+  transform: translateX(-100%);
+  width: 25%;
+}
+
+
+.bear-bg, .field-bg, .lake {
+  z-index: 1;
+}
+
+.icon {
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+/*----------------------------- animation --------------------------*/
+
+.who-images {
+  position: relative;
+}
+
+.who-img {
+  position: absolute; 
+  height: auto; 
+  user-select: none; 
+}
+
+
+.who-swan {
+  left: 69%;
+  Top: 1150px;
+  width: 270px;
+  z-index: 2;
+}
+
+.who-bear {
+  left:  24%;   
+  Top: 1290px;   
+  width: 230px;     
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.who-swan-label {
+  left: 75%;
+  top: 1020px;
+  width: 230px;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.who-bear-label {
+  left:  10%;
+  top: 1600px;
+  width: 300px;
+  z-index: 3;
+}
+
+.the-world {
+  position: absolute;
+  top: 1500px; 
+  left: 77%; 
+  transform: translateX(-50%);
+  width: 700px; 
+  height: auto;
+  z-index: 0; 
+  pointer-events: none; 
+}
+
+.boy {
+  position: absolute;
+  top: 1330px; 
+  left: 51.5%; 
+  transform: translateX(-50%);
+  width: 50px; 
+  height: auto;
+  z-index: 2; 
+  pointer-events: none; 
+}
+
+/* ------------------- grasshopper ------------------------- */
+
+.page3-hand,
+.page3-who-made-2,
+.page3-grasshopper-t {
+  position: absolute;
+}
+
+.page3-hand {
+  left: 73%;
+  top: 2090px;
+  transform: translateX(-50%);
+  width: 500px;
+  height: auto;
+  z-index: 1;
+}
+
+.page3-who-made-2 {
+  left: 59%;
+  top: 1900px;
+  width: 600px;
+  height: auto;
+  z-index: 0;
+}
+
+.page3-grasshopper {
+  position: absolute;
+  top: 2270px;
+  left: 80%; 
+  transform: translate(-50%, 0);
+  width: 150px;
+  z-index: 2;
+  transition: none;
+}
+
+.page3-grasshopper-t {
+  left: -2%;
+  top: 2450px;
+  width: 1100px;
+  height: auto;
+  z-index: 0;
+}
+
+.circle-section {
+  position: relative;
+  margin-top: 1700px;
+  width: 100%;
+}
+
+.circle-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+}
+
+.circle-img {
+  position: absolute;
+  height: auto;
+}
+
+.circle1 {
+  left: 19%; 
+  top: 180px;
+  width: 300px;
+}
+
+.circle2 {
+  left: 27%;
+  top: 490px;
+  width: 300px;
+}
+
+.circle-text {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: justify;
+  color: #000000;
+}
+
+.circle1-text {
+  left: 12%;
+  top: 250px;
+}
+
+.circle2-text {
+  left: 36%;
+  top: 590px;
+  z-index: 2;
+}
+
+/* ──────────────────────────────────── *
+   Sky
+ *──────────────────────────────────── */
+.sky-section {
+  position: relative;
+  width: 60%;
+  margin-top: 2900px;
+}
+
+.sky-wrapper {
+  position: relative;
+  left: 10%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.sky-img {
+  display: block;
+  width: 90%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
+.sky-text {
+  position: absolute;
+  top: 40%;
+  left: 110%; 
+  transform: translateY(-50%);
+  width: 200px; 
+  font-family: Arial, sans-serif;
+  font-weight: 400; 
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: justify;
+  color: #000000;
+}
+
+.circle3 {
+  left: 110%;
+  top: 100px;
+  width: 300px;
+}
+
+.bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1440px;
+  height: 57px;
+  background-color: #e5e5e5;
+}
+
+.info-row.year {
+  margin-left: 800px;
+}
+
+.info-row.memo {
+  margin-left: 250px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-label {
+  font-family: Arial, sans-serif;
+  font-weight: regular;
+  font-size: 18px;
+  margin-right: 12px;
+  white-space: nowrap;
+}
+
+.info-line {
+  flex: 1;
+  height: 1px;
+  background-color: #000000;
+}
+
+.info-row.short .info-line {
+  flex: 0 0 300px; 
+}
+
+.bottom-year {
+  position: absolute;
+  top: 3000px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  color: #000000;
+}
+
+.bottom-year {
+  position: absolute;
+  top: 3515px;
+  left: 69%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.bottom-quote {
+  position: absolute;
+  top: 3615px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.bottom-quote.visible::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink-cursor 1s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+.info-row.memo .info-label {
+  transition: transform 0.2s ease;
+}
+
+.info-row.memo .info-label:hover {
+  transform: scale(1.1);
+}
